@@ -11,17 +11,10 @@ flippedCards.subscribe(value => {
     if(memoryCards[value[0]].imageID === memoryCards[value[1]].imageID) {
       $finishedCards = [...$finishedCards, value[0], value[1]]
     }
-    setTimeout(() => {  $flippedCards = [] }, 500);
+    setTimeout(() => { $flippedCards = [] }, 500);
     
   }
 })
-
-// finishedCards.subscribe(value => {
-//   if(value.includes(id)) {
-//     flipped = true
-//   }
-// })
-
 
 export function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {

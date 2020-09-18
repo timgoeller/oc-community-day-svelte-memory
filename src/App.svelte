@@ -1,7 +1,6 @@
 <script>
 import MemoryArea from './components/MemoryArea.svelte'
 import getCats from './api'
-import { onMount } from 'svelte';
 import { tick } from 'svelte';
 let gameStarted = false
 
@@ -12,8 +11,6 @@ function startGame() {
 }
 
 async function useCatImages(catData) {
-	console.log(catData)
-	
 	gameStarted = true
 	await tick();
 
